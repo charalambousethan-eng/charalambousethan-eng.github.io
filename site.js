@@ -41,7 +41,7 @@
     kind.textContent = p.kind;
     line.textContent = p.line;
     proof.textContent = p.proof;
-    link.href = 'work/' + slug + '.html';
+    link.href = '' + slug + '.html';
     link.setAttribute('aria-label', 'Read the ' + p.name + ' story');
     panel.setAttribute('data-open', 'true');
     panel.removeAttribute('inert');
