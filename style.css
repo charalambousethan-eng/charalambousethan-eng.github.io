@@ -48,7 +48,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 /* work field */
 .work{padding-block:clamp(16px,3vw,32px) clamp(64px,10vw,140px)}
 .field{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,5vw,72px) clamp(20px,4vw,56px)}
-.field .item:nth-child(3n+2){margin-top:clamp(0px,6vw,90px)}
 .item{appearance:none;border:0;background:none;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;display:grid;gap:14px}
 .item .slot{aspect-ratio:1/1;transition:transform .45s var(--ease)}
 .item .slot.empty{aspect-ratio:1/1}
@@ -129,8 +128,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 
 @media (max-width:860px){
   .field{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .field .item:nth-child(3n+2){margin-top:0}
-  .field .item:nth-child(2n){margin-top:clamp(0px,8vw,60px)}
   .panel{width:100vw}
   .about .grid,.p-hero,.chapter,.otw{grid-template-columns:1fr}
   .otw ul{text-align:left}
@@ -138,7 +135,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 }
 @media (max-width:480px){
   .field{grid-template-columns:1fr}
-  .field .item:nth-child(2n){margin-top:0}
   .nav{gap:14px}
   .brand span{display:none}
   .gallery{grid-template-columns:1fr}
