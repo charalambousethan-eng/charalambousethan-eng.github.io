@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VisNav by Ethan Charalambous</title>
+<meta name="description" content="Two haptic wristbands that tell a visually impaired sailor which way to steer.">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="../index.html"><img src="../logo.svg" alt="" width="46" height="37"><span>Ethan Charalambous</span></a>
+<nav class="nav" aria-label="Main"><a href="../index.html#work" aria-current="page">Work</a><a href="../index.html#about">About</a><a href="../blog.html">Blog</a><a href="../index.html#contact">Contact</a></nav>
+</div></header>
+
+<main class="wrap" style="--accent:#2B4C9B">
+<section class="p-hero">
+<div><a class="back" href="../index.html#work">← All work</a><img class="p-logo" src="../logo-visnav.png" alt="VisNav logo"><h1>VisNav</h1><span class="badge">In progress</span><p class="lede">Two haptic wristbands that tell a visually impaired sailor which way to&nbsp;steer.</p></div>
+<figure class="slot" data-file="visnav-hero.jpg"><img src="../visnav-hero.jpg" alt="Side view render of the VisNav wristband" loading="lazy"></figure>
+</section>
+<dl class="facts"><div><dt>Type</dt><dd>Wearable and&nbsp;app</dd></div><div><dt>Context</dt><dd>Final-year project,&nbsp;Sussex</dd></div><div><dt>Users</dt><dd>Visually impaired&nbsp;sailors</dd></div><div><dt>Status</dt><dd>In&nbsp;progress</dd></div></dl>
+<section class="chapter"><div><div class="num">01 · Problem</div><h2>Holding a course without sight</h2></div><div class="body"><p>Visually impaired sailors rely on a sighted crew calling out course corrections. Holding a heading, knowing when to tack and reading wind shifts are the hardest&nbsp;parts.</p></div></section><section class="chapter"><div><div class="num">02 · Research</div><h2>Driven by the people who would use it</h2></div><div class="body">
+<p>I didn't want to guess what visually impaired sailors need, so every decision in VisNav goes back to them and the people who sail with&nbsp;them.</p>
+<div class="stats"><div class="stat"><span class="stat-num">45</span><span>questionnaire responses from Vision Sailing Trust members who sail with visually impaired sailors.</span></div><div class="stat"><span class="stat-num">25 years</span><span>of experience from Pete Burke, who has run sailing for visually impaired sailors for a quarter of a century.</span></div><div class="stat"><span class="stat-num">5</span><span>visually impaired sailors interviewed, aged 19 to 82, including one who is also profoundly deaf.</span></div></div>
+<p><strong>What the questionnaire found.</strong> Visually impaired sailors often sail upwind as well as anyone, but they find it hard to hold a course, know when to tack or gybe and read wind shifts. Most rely on a constant stream of spoken updates from the crew. The most requested solution was vibration or haptics in place of constant&nbsp;speech.</p>
+<p><strong>What Pete told me.</strong> Today's methods are "left a bit, right a bit" and "one spoke to port". Audio compasses exist, but he said they "vary considerably and can be really annoying to listen&nbsp;to".</p>
+<p><strong>What the sailors told me.</strong> Spoken instructions get lost in wind and noise, and one sailor described relying on audio as "a bit of an audio overload". Before building anything, I tested the idea by touch with a sailor who is both blind and deaf: a hand on the left shoulder meant steer left, right shoulder steer right, middle of the back on course. They picked it up straight&nbsp;away.</p>
+<p>To keep these needs in front of me while designing, I built a persona, Ricky: a 74-year-old sailor who can sometimes see shapes and contrast, uses VoiceOver on his iPhone, and wants to steer without constant verbal&nbsp;cues.</p>
+</div></section><section class="chapter"><div><div class="num">03 · App</div><h2>App development for visually impaired sailors</h2></div><div class="body">
+<p><strong>The app is fully audio based.</strong> It speaks every screen, confirms every button press out loud and accepts voice input, and it works alongside the phone's own VoiceOver. A sailor never has to read the screen to use it. Once a heading is set, the wristbands take over and the phone can stay in a&nbsp;pocket.</p>
+<p>For sailors with some sight, the screen still has to be readable on the water. That meant researching colour and&nbsp;contrast.</p>
+<blockquote class="quote"><p>When at sea the glare from the sun and the water often washes out low contrast colours, which makes a high contrast colour palette important, especially for visually impaired&nbsp;sailors.</p><cite>Based on Mather (2024), InFocus&nbsp;Charity</cite></blockquote>
+<div class="dodont"><div><h3 class="do">Do</h3><div class="sw" style="background:#000"><span style="background:#fff;color:#000">Aa</span></div><div class="sw" style="background:#fff;border:1px solid #1B1B19"><span style="background:#1F9BD6;color:#fff">Aa</span></div><div class="sw" style="background:#FFF46B"><span style="background:#000;color:#FFF46B">Aa</span></div></div><div><h3 class="dont">Do not</h3><div class="sw" style="background:#E3201B"><span style="background:#4DA53A;color:#E3201B">Aa</span></div><div class="sw" style="background:#0E2A3B"><span style="background:#000;color:#0E2A3B">Aa</span></div><div class="sw" style="background:#E6E6E6"><span style="background:#CFCFCF;color:#E6E6E6">Aa</span></div></div></div>
+<p><strong>How I put this into the app.</strong></p>
+<ul><li>High-contrast pairings only: black and white, navy on white, yellow and black. Green with red, blue with black, grey on grey and pale blue on white are&nbsp;avoided.</li><li>Large, bold text and simple layouts with very few buttons on each&nbsp;screen.</li><li>Two big left and right buttons to set the heading, with the new heading read out after every&nbsp;press.</li><li>The app follows the phone's high-contrast, large-text and visibility settings, so it stays readable on a moving boat in bright&nbsp;sun.</li></ul>
+<div class="phones"><figure><img src="../vn-screen-visnav.jpg" alt="VisNav screen: current heading 189, target heading with large left and right buttons, responsiveness and tolerance settings" loading="lazy"></figure><figure><img src="../vn-screen-compass.jpg" alt="Compass screen: heading 189 in large type, with a choice of seconds between spoken heading readouts" loading="lazy"></figure><figure><img src="../vn-screen-settings.jpg" alt="Settings screen: on-course feedback, tack-through angle, north type, button step size, readout interval and responsiveness" loading="lazy"></figure></div>
+
+</div></section><section class="chapter"><div><div class="num">04 · Branding</div><h2>Branding</h2></div><div class="body"><p>I designed five logo concepts, from a sailing-club boat to a crossed-out eye, before settling on a compass star around an eye: navigation and sight in one&nbsp;mark.</p>
+<div class="logo-concepts"><img src="../vn-logo-concept-1.png" style="background:#fffced" alt="VisNav Sailing Club concept logo with a boat" loading="lazy"><img src="../vn-logo-concept-2.png" style="background:#02b3bc" alt="VisNav Sailing Assistant concept logo with sails" loading="lazy"><img src="../vn-logo-concept-3.png" style="background:#f4f0ed" alt="VisNav Sailing concept logo with a crossed-out eye" loading="lazy"><img src="../vn-logo-concept-4.png" style="background:#000000" alt="Dark concept logo with an eye inside a compass star" loading="lazy"><img src="../vn-logo-concept-5.png" style="background:#ffffff" alt="Grey concept logo with an eye inside a compass star" loading="lazy"></div>
+<div class="logo-final"><img src="../logo-visnav.png" alt="Final VisNav logo: an eye inside a compass star, with the VisNav wordmark"></div>
+<h3 class="sub">Posters</h3><p>Posters to go up around Brighton Marina, encouraging sailors to join the course and help test VisNav on the&nbsp;water.</p><div class="posters"><img src="../vn-poster-1.jpg" alt="Poster: Sail with confidence, empowering visually impaired sailors, Brighton Marina" loading="lazy"><img src="../vn-poster-2.jpg" alt="Poster: VisNav for visually impaired sailors, calling all skippers" loading="lazy"><img src="../vn-poster-3.jpg" alt="Poster: Empowering visually impaired sailors, support sailors in their journey to independence" loading="lazy"></div></div></section><section class="chapter"><div><div class="num">05 · Prototype</div><h2>Low-fidelity prototype</h2></div><div class="body"><p>Before building any electronics, I tested the core idea by hand during Blind Sailing Week. I sailed with a helm who is both profoundly deaf and severely visually impaired, so spoken instructions were never an&nbsp;option.</p>
+<p>We used touch alone. A hand in the middle of the back meant on course. A hand on the left shoulder meant steer left, and a hand on the right shoulder meant steer&nbsp;right.</p>
+<p>The sailor understood and responded to the cues quickly and intuitively, with no verbal instructions at all. It was early evidence that steering directions can be communicated through&nbsp;touch.</p>
+<p>VisNav keeps exactly the same mapping. Vibrations on the left and right wrists replace the hands on the shoulders, and no vibration means you are on&nbsp;course.</p></div></section>
+
+<a class="next" href="bird-blend.html" style="--accent:#8C5A33"><span class="label">Next project</span><span class="big">Bird & Blend Teapot →</span></a>
+</main>
+<footer class="site-foot"><div class="wrap"><span>© 2026 Ethan Charalambous</span><span>Product Design, University of Sussex</span></div></footer>
+<script src="../js/site.js"></script>
+</body>
+</html>
