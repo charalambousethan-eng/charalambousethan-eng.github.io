@@ -35,9 +35,9 @@
     panel.style.setProperty('--accent', p.accent);
     big.textContent = p.name;
     slot.classList.remove('empty');
-    slot.setAttribute('data-file', 'img/' + p.hero);
+    slot.setAttribute('data-file', 'img/' + (p.panel || p.hero));
     img.alt = p.alt;
-    img.src = 'img/' + p.hero;
+    img.src = 'img/' + (p.panel || p.hero);
     kind.textContent = p.kind;
     line.textContent = p.line;
     proof.textContent = p.proof;
@@ -77,4 +77,16 @@
   dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   dlg.addEventListener('close', function () { btn.focus({ preventScroll: true }); });
+})();
+
+// Any button with data-dialog="id" opens that dialog (used by the Work icon).
+(function () {
+  document.querySelectorAll('[data-dialog]').forEach(function (btn) {
+    var dlg = document.getElementById(btn.getAttribute('data-dialog'));
+    if (!dlg) return;
+    btn.addEventListener('click', function () { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); });
+    dlg.querySelectorAll('[data-close]').forEach(function (c) { c.addEventListener('click', function () { dlg.close(); }); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function () { btn.focus({ preventScroll: true }); });
+  });
 })();
