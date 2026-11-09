@@ -446,3 +446,9 @@ h1,h2,h3{text-wrap:balance}
 .rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.menu-panel,.hello{transition:none}}
+
+/* ---------- Small-screen fixes ---------- */
+/* Bird & Blend user profile: let the icon sit above the details when the card is too narrow, so the page no longer runs off the side of a phone */
+.profile{flex-wrap:wrap}
+/* Links to #work and #about stop below the sticky menu bar instead of hiding the first line under it */
+section[id]{scroll-margin-top:80px}
