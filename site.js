@@ -113,7 +113,7 @@
   var nav=head.querySelector('.nav');
   var mail='mailto:ethan_charalambous@outlook.com';
   var hello=document.createElement('a'); hello.className='hello'; hello.href=mail;
-  hello.innerHTML='<span class="dot-live" aria-hidden="true"></span>Say hello';
+  hello.innerHTML='<span class="dot-live" aria-hidden="true"></span>Let&apos;s talk';
   head.appendChild(hello);
   var btn=document.createElement('button'); btn.className='menu-btn'; btn.type='button'; btn.textContent='Menu';
   btn.setAttribute('aria-expanded','false'); head.appendChild(btn);

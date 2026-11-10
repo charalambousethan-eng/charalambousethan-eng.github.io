@@ -452,3 +452,13 @@ h1,h2,h3{text-wrap:balance}
 .profile{flex-wrap:wrap}
 /* Links to #work and #about stop below the sticky menu bar instead of hiding the first line under it */
 section[id]{scroll-margin-top:80px}
+
+/* --- fewer lines (Nov 2026): no hairline dividers, cards without outlines --- */
+.item .meta,.panel-foot,.about,.chapter,.next,.posts,.meet,.ad-cols,.exp.wx li{border-top:0}
+.facts{border-block:0;padding-block:0}
+.posts li{border-bottom:0}
+.site-head.scrolled{box-shadow:none}
+.quote,.stat,.mat,.profile,.d19,.boxes,.concept,.gallery .fit,.badge,.tags li,.ig,.zoom,.brand-logo,.wide-img,.logo-final,.logo-concepts img,.wx-logo:not(.wx-dark),.close{border:0}
+.mat{border-top:4px solid var(--accent)}
+.concept img{border-bottom:0}
+.chapter{padding-block:clamp(40px,6vw,80px)}
