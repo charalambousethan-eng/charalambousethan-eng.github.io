@@ -1,6 +1,6 @@
 /* Layout: calm off-white sheet; homepage is a field of objects that open a Palmer-style split panel. */
 :root{
-  --bg:#F4F3EE; --paper:#FBFAF6; --ink:#1B1B19; --muted:#6D6B64; --line:#D9D6CC; --dark:#3A3934;
+  --bg:#ECEDEE; --paper:#F6F7F8; --ink:#18191B; --muted:#676A70; --line:#D5D7DA; --dark:#3A3934;
   --accent:#1B1B19;
   --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --text:"Figtree",ui-sans-serif,system-ui,sans-serif;
@@ -462,3 +462,6 @@ section[id]{scroll-margin-top:80px}
 .mat{border-top:4px solid var(--accent)}
 .concept img{border-bottom:0}
 .chapter{padding-block:clamp(40px,6vw,80px)}
+
+/* --- cool grey + accent colour (Nov 2026) --- */
+.intro h1 .hl{background:linear-gradient(transparent 55%,#FFD43B 55% 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
