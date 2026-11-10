@@ -33,7 +33,7 @@
     if (!p) return;
     lastBtn = btn;
     panel.style.setProperty('--accent', p.accent);
-    big.textContent = p.name;
+    if (p.nameHtml) { big.innerHTML = p.nameHtml; big.classList.add('vn-big'); } else { big.textContent = p.name; big.classList.remove('vn-big'); }
     slot.classList.remove('empty');
     slot.setAttribute('data-file', '' + (p.panel || p.hero));
     img.alt = p.alt;
