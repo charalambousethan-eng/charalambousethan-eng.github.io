@@ -465,3 +465,11 @@ section[id]{scroll-margin-top:80px}
 
 /* --- cool grey + accent colour (Nov 2026) --- */
 .intro h1 .hl{background:linear-gradient(transparent 55%,#FFD43B 55% 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* --- monospaced detail font (Nov 2026): labels, tags, dates, badges --- */
+:root{--mono:"Share Tech Mono",ui-monospace,monospace}
+.label,.status,.facts dt,.chapter .num,.profile dt,.kind,.badge,.tags li,.phones figcaption{font-family:var(--mono);font-weight:400;letter-spacing:.04em}
+.label,.facts dt,.chapter .num,.profile dt,.badge,.status{font-size:.9rem}
+.posts li{grid-template-columns:180px minmax(0,1fr)}
+.posts .label{white-space:nowrap}
+@media (max-width:640px){.posts li{grid-template-columns:1fr}}
